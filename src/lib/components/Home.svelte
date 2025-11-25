@@ -522,6 +522,7 @@
             }
             player.loadVideoById(player.playlist[player.part][0].id)
         }
+        openPlaylist(playerID)
         jq(`.${playerID} .playlist .item${player.part}`).css({'background':'rgb(53, 53, 53)'})
         jq(`.${playerID} .playlist .item${player.part} img`).css({'border':'1px solid red'})
     }
@@ -815,7 +816,7 @@
     .player-wrapper .music .playlist button:hover,
     .player-wrapper .game .playlist button:hover,
     .player-wrapper .distraction .playlist button:hover{
-        background: rgb(53, 53, 53);
+        background: rgb(39, 39, 39);
         cursor: pointer;
     }
     .player-wrapper .news .playlist button img,
