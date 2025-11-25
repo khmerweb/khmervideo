@@ -156,8 +156,7 @@ class Post{
         return results.toArray()
     }
 
-    async getRandomPlaylist(c, amount, category, thumbs){
-        const db = c.get('db')
+    async getRandomPlaylist(amount, category, thumbs){
         const results = await db.collection('Post').aggregate(
             [{ $match : { categories : { $regex: category, $not: { $regex: "unavailable" } } , thumb: {$nin: thumbs}, videos: { $ne: "" } } }, { $sample:{ size: amount }}]
         )
