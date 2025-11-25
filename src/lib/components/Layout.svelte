@@ -6,6 +6,10 @@
     let { data, children } = $props()
 </script>
 
+<svelte:head>
+	<link href="/styles/base-frontend.css" rel="stylesheet" />
+</svelte:head>
+
 <scetion class="Layout">
     <Header {data} />
     <Menu {data} />
