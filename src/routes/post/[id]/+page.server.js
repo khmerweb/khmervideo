@@ -1,4 +1,5 @@
 import postDB from "$lib/db/post.js"
+import userDB from "$lib/db/user.js"
 import setup from "$lib/settings.js"
 
 export async function load({ locals, params }){
@@ -7,11 +8,10 @@ export async function load({ locals, params }){
     const settings = await setup()
     const post = await postDB.getPost(params)
     const authorId = post.author
-    //const { author } = await response2.json()
-    const authorName = "sokavuth" //author.title
-    //const response3 = await fetch(`${locals.apiUrl}/api/post/${id}?amount=7`)
-    //const { randomPosts } = await response3.json()
-    let randomPosts = []
+    const author = await userDB.getUser(authorId)
+    const authorName = author.title
+    const randomPosts = await postDB.getRandomPosts(7, post)
+    
     const thumb = post.thumb
     const title = post.title
     

@@ -39,6 +39,8 @@ class User{
     async getUser(id){
         const _id = new ObjectId(id)
         let user = await db.collection('User').findOne({ _id })
+        user = {...user, _id: user._id.toString()}
+        return user
     }
 
     async getUsers(c, amount){

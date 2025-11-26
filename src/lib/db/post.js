@@ -119,22 +119,21 @@ class Post{
         return { posts, count }
     }
 
-    async getRandomPosts(c, amount, post){
-        const db = c.get('db')
-        
+    async getRandomPosts(amount, post){
+        const postExclude = new ObjectId(post._id)
         let results
         if(post.categories.includes('news')){
             if(post.categories.includes('doc')){
                 results = await db.collection('Post').aggregate(
-                    [{ $match : {categories : { $regex: "doc" }, _id: {$ne: post._id}} }, { $sample:{ size: amount }}]
+                    [{ $match : {categories : { $regex: "doc" }, _id: {$ne:  postExclude} } }, { $sample:{ size: amount }}]
                 )
             }else if(post.categories.includes('opinion')){
                 results = await db.collection('Post').aggregate(
-                    [{ $match : { categories:{ $regex: "opinion" }, _id: { $ne: post._id } }}, { $sort: { date : -1 } }, { $limit: amount }]
+                    [{ $match : { categories:{ $regex: "opinion" }, _id: { $ne: postExclude } }}, { $sort: { date : -1 } }, { $limit: amount }]
                 )
             }else{
                 results = await db.collection('Post').aggregate(
-                    [{ $match : { categories:{ $regex: "news" }, _id: { $ne: post._id } }}, { $sort: { date : -1 } }, { $limit: amount }]
+                    [{ $match : { categories:{ $regex: "news" }, _id: { $ne: postExclude } }}, { $sort: { date : -1 } }, { $limit: amount }]
                 )
             }
         }else{
@@ -147,11 +146,14 @@ class Post{
             }
 
             results = await db.collection('Post').aggregate(
-                [{ $match : {categories: { $regex: category }, _id: {$ne: post._id}} }, { $sample:{ size: amount }}]
+                [{ $match : {categories: { $regex: category }, _id: {$ne: postExclude }} }, { $sample:{ size: amount }}]
             )
         }
+
+        let posts = await results.toArray()
+        posts = posts.map(post => ({...post, _id: post._id.toString()}))
        
-        return results.toArray()
+        return posts
     }
 
     async getRandomAll(c, amount){

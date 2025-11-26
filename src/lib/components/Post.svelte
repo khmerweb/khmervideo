@@ -4,7 +4,7 @@
     let post = $state(data.post)
     import { Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, X, Line } from 'svelte-share-buttons-component'
     const url = `https://khmervideo.vercel.app/post/${post._id}`
-	const title = 'Svelte Share Buttons Component';
+	const title = post.title;
 	const desc = 'Svelte based social media share buttons component with no tracking.'
     const Categories = {
         news: 'ព័ត៌មាន',
@@ -50,7 +50,7 @@
     
 </script>
 
-<section class="Post region" >
+<section class="Post region" data-sveltekit-reload>
     <div class="main">
         <h3 class="title">{post.title}</h3>
         <div class="categories">
@@ -123,7 +123,7 @@
 }
 .Post .main .content{
     margin: 20px 0;
-    font: 14px/1.5 Courgette, HandWriting;
+    font-size: 16px;
 }
 :global(.Post .main .content img){
     width: 100%;
