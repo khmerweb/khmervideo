@@ -85,6 +85,7 @@
 @media only screen and (max-width:600px){
     .Page{
         grid-template-columns: 100%;
+        padding: 0;
     }
     .Page .sidebar{
         padding: 0 15px;

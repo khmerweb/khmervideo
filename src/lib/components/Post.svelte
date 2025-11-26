@@ -195,6 +195,7 @@
 @media only screen and (max-width:600px){
     .Post{
         grid-template-columns: 100%;
+        padding: 0;
     }
     .Post .sidebar{
         padding: 0 15px;
