@@ -781,7 +781,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: 400px;
+        max-width: 400px;
         max-height: 100%;
         background: rgb(24, 24, 24);
         padding: 5px;
