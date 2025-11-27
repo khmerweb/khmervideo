@@ -39,6 +39,7 @@
 .Page .main .title{
     font: 18px/1.5 Oswald, Koulen;
     margin-bottom: 20px;
+    color: orange;
 }
 .Page .main .content{
     font-size: 16px;

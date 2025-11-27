@@ -570,7 +570,7 @@
     <script src="https://www.youtube.com/iframe_api"></script>
 </svelte:head>
 
-<section class="main region">
+<section class="main region" data-sveltekit-reload>
     <div class="player-wrapper">
         <div class="news">
             <div id="news"></div>
@@ -588,10 +588,10 @@
                 {/each}
             </div>
             <div class="play-news">
-                <button onclick={()=>nextPrevious('news','previous')}>វីដេអូមុន</button>
-                <button onclick={()=>newPlaylist('news')} class='new-playlist'>ដូរ​កំរង​វីដេអូ​</button>
-                <button onclick={()=>openPlaylist('news')}>​កំរង​វីដេអូ</button>
-                <button onclick={()=>nextPrevious('news','next')}>វីដេអូបន្ទាប់</button>
+                <button onclick={()=>nextPrevious('news','previous')}>&#9198;</button>
+                <button onclick={()=>newPlaylist('news')} class='new-playlist'>&#127381;</button>
+                <button onclick={()=>openPlaylist('news')}>&#128256;</button>
+                <button onclick={()=>nextPrevious('news','next')}>&#9197;</button>
             </div>
         </div>
         <div class="movie">
@@ -610,10 +610,10 @@
                 {/each}
             </div>
             <div class="play-movie">
-                <button onclick={()=>nextPrevious('movie','previous')}>វីដេអូមុន</button>
-                <button onclick={()=>newPlaylist('movie')} class='new-playlist'>ដូរ​កំរង​វីដេអូ​</button>
-                <button onclick={()=>openPlaylist('movie')}>​កំរង​វីដេអូ</button>
-                <button onclick={()=>nextPrevious('movie','next')}>វីដេអូបន្ទាប់</button>
+                <button onclick={()=>nextPrevious('movie','previous')}>&#9198;</button>
+                <button onclick={()=>newPlaylist('movie')} class='new-playlist'>&#127381;</button>
+                <button onclick={()=>openPlaylist('movie')}>&#128256;</button>
+                <button onclick={()=>nextPrevious('movie','next')}>&#9197;</button>
             </div>
         </div>
         <div class="travel">
@@ -632,10 +632,10 @@
                 {/each}
             </div>
             <div class="play-travel">
-                <button onclick={()=>nextPrevious('travel','previous')}>វីដេអូមុន</button>
-                <button onclick={()=>newPlaylist('travel')} class='new-playlist'>ដូរ​កំរង​វីដេអូ​</button>
-                <button onclick={()=>openPlaylist('travel')}>​កំរង​វីដេអូ</button>
-                <button onclick={()=>nextPrevious('travel','next')}>វីដេអូបន្ទាប់</button>
+                <button onclick={()=>nextPrevious('travel','previous')}>&#9198;</button>
+                <button onclick={()=>newPlaylist('travel')} class='new-playlist'>&#127381;</button>
+                <button onclick={()=>openPlaylist('travel')}>​&#128256;</button>
+                <button onclick={()=>nextPrevious('travel','next')}>&#9197;</button>
             </div>
         </div>
         <div class="doc">
@@ -654,10 +654,10 @@
                 {/each}
             </div>
             <div class="play-doc">
-                <button onclick={()=>nextPrevious('doc','previous')}>វីដេអូមុន</button>
-                <button onclick={()=>newPlaylist('doc')} class='new-playlist'>ដូរ​កំរង​វីដេអូ​</button>
-                <button onclick={()=>openPlaylist('doc')}>​កំរង​វីដេអូ</button>
-                <button onclick={()=>nextPrevious('doc','next')}>វីដេអូបន្ទាប់</button>
+                <button onclick={()=>nextPrevious('doc','previous')}>&#9198;</button>
+                <button onclick={()=>newPlaylist('doc')} class='new-playlist'>&#127381;</button>
+                <button onclick={()=>openPlaylist('doc')}>&#128256;</button>
+                <button onclick={()=>nextPrevious('doc','next')}>&#9197;</button>
             </div>
         </div>
         <div class="web">
@@ -676,10 +676,10 @@
                 {/each}
             </div>
             <div class="play-web">
-                <button onclick={()=>nextPrevious('web','previous')}>វីដេអូមុន</button>
-                <button onclick={()=>newPlaylist('web')} class='new-playlist'>ដូរ​កំរង​វីដេអូ​</button>
-                <button onclick={()=>openPlaylist('web')}>​កំរង​វីដេអូ</button>
-                <button onclick={()=>nextPrevious('web','next')}>វីដេអូបន្ទាប់</button>
+                <button onclick={()=>nextPrevious('web','previous')}>&#9198;</button>
+                <button onclick={()=>newPlaylist('web')} class='new-playlist'>&#127381;</button>
+                <button onclick={()=>openPlaylist('web')}>&#128256;</button>
+                <button onclick={()=>nextPrevious('web','next')}>&#9197;</button>
             </div>
         </div>
         <div class="sport">
@@ -698,10 +698,10 @@
                 {/each}
             </div>
             <div class="play-sport">
-                <button onclick={()=>nextPrevious('sport','previous')}>វីដេអូមុន</button>
-                <button onclick={()=>newPlaylist('sport')} class='new-playlist'>ដូរ​កំរង​វីដេអូ​</button>
-                <button onclick={()=>openPlaylist('sport')}>​កំរង​វីដេអូ</button>
-                <button onclick={()=>nextPrevious('sport','next')}>វីដេអូបន្ទាប់</button>
+                <button onclick={()=>nextPrevious('sport','previous')}>&#9198;</button>
+                <button onclick={()=>newPlaylist('sport')} class='new-playlist'>&#127381;</button>
+                <button onclick={()=>openPlaylist('sport')}>&#128256;</button>
+                <button onclick={()=>nextPrevious('sport','next')}>&#9197;</button>
             </div>
         </div>
         <div class="food">
@@ -720,10 +720,10 @@
                 {/each}
             </div>
             <div class="play-food">
-                <button onclick={()=>nextPrevious('food','previous')}>វីដេអូមុន</button>
-                <button onclick={()=>newPlaylist('food')} class='new-playlist'>ដូរ​កំរង​វីដេអូ​</button>
-                <button onclick={()=>openPlaylist('food')}>​កំរង​វីដេអូ</button>
-                <button onclick={()=>nextPrevious('food','next')}>វីដេអូបន្ទាប់</button>
+                <button onclick={()=>nextPrevious('food','previous')}>&#9198;</button>
+                <button onclick={()=>newPlaylist('food')} class='new-playlist'>&#127381;</button>
+                <button onclick={()=>openPlaylist('food')}>&#128256;</button>
+                <button onclick={()=>nextPrevious('food','next')}>&#9197;</button>
             </div>
         </div>
         <div class="music">
@@ -742,10 +742,10 @@
                 {/each}
             </div>
             <div class="play-music">
-                <button onclick={()=>nextPrevious('music','previous')}>វីដេអូមុន</button>
-                <button onclick={()=>newPlaylist('music')} class='new-playlist'>ដូរ​កំរង​វីដេអូ​</button>
-                <button onclick={()=>openPlaylist('music')}>​កំរង​វីដេអូ</button>
-                <button onclick={()=>nextPrevious('music','next')}>វីដេអូបន្ទាប់</button>
+                <button onclick={()=>nextPrevious('music','previous')}>&#9198;</button>
+                <button onclick={()=>newPlaylist('music')} class='new-playlist'>&#127381;</button>
+                <button onclick={()=>openPlaylist('music')}>&#128256;</button>
+                <button onclick={()=>nextPrevious('music','next')}>&#9197;</button>
             </div>
         </div>
         <div class="game">
@@ -764,10 +764,10 @@
                 {/each}
             </div>
             <div class="play-game">
-                <button onclick={()=>nextPrevious('game','previous')}>វីដេអូមុន</button>
-                <button onclick={()=>newPlaylist('game')} class='new-playlist'>ដូរ​កំរង​វីដេអូ​</button>
-                <button onclick={()=>openPlaylist('game')}>​កំរង​វីដេអូ</button>
-                <button onclick={()=>nextPrevious('game','next')}>វីដេអូបន្ទាប់</button>
+                <button onclick={()=>nextPrevious('game','previous')}>&#9198;</button>
+                <button onclick={()=>newPlaylist('game')} class='new-playlist'>&#127381;</button>
+                <button onclick={()=>openPlaylist('game')}>&#128256;</button>
+                <button onclick={()=>nextPrevious('game','next')}>&#9197;</button>
             </div>
         </div>
         <div class="distraction">
@@ -784,10 +784,10 @@
                 {/each}
             </div>
             <div class="play-distraction">
-                <button onclick={()=>nextPrevious('distraction','previous')}>វីដេអូមុន</button>
-                <button onclick={()=>newPlaylist('distraction')} class='new-playlist'>ដូរ​កំរង​វីដេអូ​</button>
-                <button onclick={()=>openPlaylist('distraction')}>​កំរង​វីដេអូ</button>
-                <button onclick={()=>nextPrevious('distraction','next')}>វីដេអូបន្ទាប់</button>
+                <button onclick={()=>nextPrevious('distraction','previous')}>&#9198;</button>
+                <button onclick={()=>newPlaylist('distraction')} class='new-playlist'>&#127381;</button>
+                <button onclick={()=>openPlaylist('distraction')}>&#128256;</button>
+                <button onclick={()=>nextPrevious('distraction','next')}>&#9197;</button>
             </div>
         </div>
 
@@ -955,15 +955,12 @@
     .player-wrapper .play-music button,
     .player-wrapper .play-game button,
     .player-wrapper .play-distraction button{
-        color: orange;
+        color: white;
         padding-top: 0;
         width: auto;
         background-color: transparent;
-        font-family: Vidaloka, OdorMeanChey;
+        font-size: 22px;
         border: none;
-        background: rgb(44, 44, 44);
-        padding: 1px 7px;
-        border-radius: 2px;
     }
     .player-wrapper .play-news button:hover, 
     .player-wrapper .play-movie button:hover,
