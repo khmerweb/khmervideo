@@ -588,10 +588,10 @@
                 {/each}
             </div>
             <div class="play-news">
-                <button onclick={()=>nextPrevious('news','previous')}>&#9198;</button>
-                <button onclick={()=>newPlaylist('news')} class='new-playlist'>&#127381;</button>
-                <button onclick={()=>openPlaylist('news')}>&#128256;</button>
-                <button onclick={()=>nextPrevious('news','next')}>&#9197;</button>
+                <button onclick={()=>nextPrevious('news','previous')} title=""><i class="fa fa-step-backward"></i></button>
+                <button onclick={()=>newPlaylist('news')} title="new playlist"><i class="fa fa-list"></i></button>
+                <button onclick={()=>openPlaylist('news')} title="playlist"><i class="fa fa-play-circle" ></i></button>
+                <button onclick={()=>nextPrevious('news','next')} title=""><i class="fa fa-step-forward"></i></button>
             </div>
         </div>
         <div class="movie">
@@ -610,10 +610,10 @@
                 {/each}
             </div>
             <div class="play-movie">
-                <button onclick={()=>nextPrevious('movie','previous')}>&#9198;</button>
-                <button onclick={()=>newPlaylist('movie')} class='new-playlist'>&#127381;</button>
-                <button onclick={()=>openPlaylist('movie')}>&#128256;</button>
-                <button onclick={()=>nextPrevious('movie','next')}>&#9197;</button>
+                <button onclick={()=>nextPrevious('movie','previous')} title=""><i class="fa fa-step-backward"></i></button>
+                <button onclick={()=>newPlaylist('movie')} title="new playlist"><i class="fa fa-list"></i></button>
+                <button onclick={()=>openPlaylist('movie')} title="playlist"><i class="fa fa-play-circle" ></i></button>
+                <button onclick={()=>nextPrevious('movie','next')} title=""><i class="fa fa-step-forward"></i></button>
             </div>
         </div>
         <div class="travel">
@@ -632,10 +632,10 @@
                 {/each}
             </div>
             <div class="play-travel">
-                <button onclick={()=>nextPrevious('travel','previous')}>&#9198;</button>
-                <button onclick={()=>newPlaylist('travel')} class='new-playlist'>&#127381;</button>
-                <button onclick={()=>openPlaylist('travel')}>​&#128256;</button>
-                <button onclick={()=>nextPrevious('travel','next')}>&#9197;</button>
+                <button onclick={()=>nextPrevious('travel','previous')} title=""><i class="fa fa-step-backward"></i></button>
+                <button onclick={()=>newPlaylist('travel')} title="new playlist"><i class="fa fa-list"></i></button>
+                <button onclick={()=>openPlaylist('travel')} title="playlist"><i class="fa fa-play-circle" ></i></button>
+                <button onclick={()=>nextPrevious('travel','next')} title=""><i class="fa fa-step-forward"></i></button>
             </div>
         </div>
         <div class="doc">
@@ -654,10 +654,10 @@
                 {/each}
             </div>
             <div class="play-doc">
-                <button onclick={()=>nextPrevious('doc','previous')}>&#9198;</button>
-                <button onclick={()=>newPlaylist('doc')} class='new-playlist'>&#127381;</button>
-                <button onclick={()=>openPlaylist('doc')}>&#128256;</button>
-                <button onclick={()=>nextPrevious('doc','next')}>&#9197;</button>
+                <button onclick={()=>nextPrevious('doc','previous')} title=""><i class="fa fa-step-backward"></i></button>
+                <button onclick={()=>newPlaylist('doc')} title="new playlist"><i class="fa fa-list"></i></button>
+                <button onclick={()=>openPlaylist('doc')} title="playlist"><i class="fa fa-play-circle" ></i></button>
+                <button onclick={()=>nextPrevious('doc','next')} title=""><i class="fa fa-step-forward"></i></button>
             </div>
         </div>
         <div class="web">
@@ -676,10 +676,10 @@
                 {/each}
             </div>
             <div class="play-web">
-                <button onclick={()=>nextPrevious('web','previous')}>&#9198;</button>
-                <button onclick={()=>newPlaylist('web')} class='new-playlist'>&#127381;</button>
-                <button onclick={()=>openPlaylist('web')}>&#128256;</button>
-                <button onclick={()=>nextPrevious('web','next')}>&#9197;</button>
+                <button onclick={()=>nextPrevious('web','previous')} title=""><i class="fa fa-step-backward"></i></button>
+                <button onclick={()=>newPlaylist('web')} title="new playlist"><i class="fa fa-list"></i></button>
+                <button onclick={()=>openPlaylist('web')} title="playlist"><i class="fa fa-play-circle" ></i></button>
+                <button onclick={()=>nextPrevious('web','next')} title=""><i class="fa fa-step-forward"></i></button>
             </div>
         </div>
         <div class="sport">
@@ -698,10 +698,10 @@
                 {/each}
             </div>
             <div class="play-sport">
-                <button onclick={()=>nextPrevious('sport','previous')}>&#9198;</button>
-                <button onclick={()=>newPlaylist('sport')} class='new-playlist'>&#127381;</button>
-                <button onclick={()=>openPlaylist('sport')}>&#128256;</button>
-                <button onclick={()=>nextPrevious('sport','next')}>&#9197;</button>
+                <button onclick={()=>nextPrevious('sport','previous')} title=""><i class="fa fa-step-backward"></i></button>
+                <button onclick={()=>newPlaylist('sport')} title="new playlist"><i class="fa fa-list"></i></button>
+                <button onclick={()=>openPlaylist('sport')} title="playlist"><i class="fa fa-play-circle" ></i></button>
+                <button onclick={()=>nextPrevious('sport','next')} title=""><i class="fa fa-step-forward"></i></button>
             </div>
         </div>
         <div class="food">
@@ -720,10 +720,10 @@
                 {/each}
             </div>
             <div class="play-food">
-                <button onclick={()=>nextPrevious('food','previous')}>&#9198;</button>
-                <button onclick={()=>newPlaylist('food')} class='new-playlist'>&#127381;</button>
-                <button onclick={()=>openPlaylist('food')}>&#128256;</button>
-                <button onclick={()=>nextPrevious('food','next')}>&#9197;</button>
+                <button onclick={()=>nextPrevious('food','previous')} title=""><i class="fa fa-step-backward"></i></button>
+                <button onclick={()=>newPlaylist('food')} title="new playlist"><i class="fa fa-list"></i></button>
+                <button onclick={()=>openPlaylist('food')} title="playlist"><i class="fa fa-play-circle" ></i></button>
+                <button onclick={()=>nextPrevious('food','next')} title=""><i class="fa fa-step-forward"></i></button>
             </div>
         </div>
         <div class="music">
@@ -742,10 +742,10 @@
                 {/each}
             </div>
             <div class="play-music">
-                <button onclick={()=>nextPrevious('music','previous')}>&#9198;</button>
-                <button onclick={()=>newPlaylist('music')} class='new-playlist'>&#127381;</button>
-                <button onclick={()=>openPlaylist('music')}>&#128256;</button>
-                <button onclick={()=>nextPrevious('music','next')}>&#9197;</button>
+                <button onclick={()=>nextPrevious('music','previous')} title=""><i class="fa fa-step-backward"></i></button>
+                <button onclick={()=>newPlaylist('music')} title="new playlist"><i class="fa fa-list"></i></button>
+                <button onclick={()=>openPlaylist('music')} title="playlist"><i class="fa fa-play-circle" ></i></button>
+                <button onclick={()=>nextPrevious('music','next')} title=""><i class="fa fa-step-forward"></i></button>
             </div>
         </div>
         <div class="game">
@@ -764,10 +764,10 @@
                 {/each}
             </div>
             <div class="play-game">
-                <button onclick={()=>nextPrevious('game','previous')}>&#9198;</button>
-                <button onclick={()=>newPlaylist('game')} class='new-playlist'>&#127381;</button>
-                <button onclick={()=>openPlaylist('game')}>&#128256;</button>
-                <button onclick={()=>nextPrevious('game','next')}>&#9197;</button>
+                <button onclick={()=>nextPrevious('game','previous')} title=""><i class="fa fa-step-backward"></i></button>
+                <button onclick={()=>newPlaylist('game')} title="new playlist"><i class="fa fa-list"></i></button>
+                <button onclick={()=>openPlaylist('game')} title="playlist"><i class="fa fa-play-circle" ></i></button>
+                <button onclick={()=>nextPrevious('game','next')} title=""><i class="fa fa-step-forward"></i></button>
             </div>
         </div>
         <div class="distraction">
@@ -784,10 +784,10 @@
                 {/each}
             </div>
             <div class="play-distraction">
-                <button onclick={()=>nextPrevious('distraction','previous')}>&#9198;</button>
-                <button onclick={()=>newPlaylist('distraction')} class='new-playlist'>&#127381;</button>
-                <button onclick={()=>openPlaylist('distraction')}>&#128256;</button>
-                <button onclick={()=>nextPrevious('distraction','next')}>&#9197;</button>
+                <button onclick={()=>nextPrevious('distraction','previous')} title=""><i class="fa fa-step-backward"></i></button>
+                <button onclick={()=>newPlaylist('distraction')} title="new playlist"><i class="fa fa-list"></i></button>
+                <button onclick={()=>openPlaylist('distraction')} title="playlist"><i class="fa fa-play-circle" ></i></button>
+                <button onclick={()=>nextPrevious('distraction','next')} title=""><i class="fa fa-step-forward"></i></button>
             </div>
         </div>
 
@@ -942,7 +942,7 @@
         display: flex;
         justify-content: center;
         align-content: center;
-        gap: 10px;
+        gap: 20px;
     }
     
     .player-wrapper .play-news button, 
