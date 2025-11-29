@@ -5,13 +5,12 @@ import { ObjectId } from 'mongodb'
 import bcrypt from "bcryptjs"
 
 class User{
-    async count(c){
-        const db = c.get('db')
+    async count(){
         return await db.collection('User').countDocuments()
     }
 
     async createRootUser(c){
-        const hashPassword = bcrypt.hashSync("Tin2024", 8)
+        const hashPassword = bcrypt.hashSync("xxxxxxxx", 8)
         const user = {
             email: "sokhavuth@khmerweb.app",
             title: "សុខាវុធ",
@@ -26,13 +25,14 @@ class User{
         await db.collection('User').insertOne(user)
     }
 
-    async createUser(c, user){
-        const db = c.get('db')
+    async createUser(user){
         await db.collection('User').insertOne(user)
     }
 
     async checkUser(email){
-        return await db.collection('User').findOne({email})
+        let user = await db.collection('User').findOne({email})
+        user = {...user, _id: user._id.toString()}
+        return user
     }
 
     async getUser(id){
@@ -42,36 +42,26 @@ class User{
         return user
     }
 
-    async getUsers(c, amount){
-        const db = c.get('db')
-        return await db.collection('User').find().sort({ date: -1 }).limit(amount).toArray()
+    async getUsers(amount){
+        let users = await db.collection('User').find().sort({ date: -1 }).limit(amount).toArray()
+        users = users.map(user => ({...user, _id: user._id.toString()}))
+        return users
     }
 
-    async updateUser(c, user){
-        const db = c.get('db')
-        const _id = new ObjectId(c.req.param('id'))
+    async updateUser(id, user){
+        const _id = new ObjectId(id)
         await db.collection('User').updateOne({ _id }, {$set: user})
     }
 
-    async deleteUser(c){
-        const db = c.get('db')
-        const _id = new ObjectId(c.req.param('id'))
+    async deleteUser(id){
+        const _id = new ObjectId(id)
         await db.collection('User').deleteOne({ _id })
     }
 
-    async paginateUsers(c, amount){
-        const db = c.get('db')
-        let page
-
-        if(c.req.param('page')){
-            page = parseInt(c.req.param('page'))
-        }else if(c.req.query('page')){
-            page = parseInt(c.req.query('page'))
-        }else{
-            page = parseInt(c.get('navPage'))
-        }
-        
-        return await db.collection('User').find().sort({ date: -1 }).skip((page-1)*amount).limit(amount).toArray()
+    async paginateUsers(page, amount){
+        let users = await db.collection('User').find().sort({ date: -1 }).skip((page-1)*amount).limit(amount).toArray()
+        users = users.map(user => ({...user, _id: user._id.toString()}))
+        return users
     }
 }
 

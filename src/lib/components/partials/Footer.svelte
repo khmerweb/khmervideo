@@ -9,7 +9,7 @@
     .Footer .wrapper{
         text-align: center;
         padding: 50px 0;
-        background: var(--menu);
+        background: var(--footer);
         color: white;
     }
     .Footer .wrapper a{

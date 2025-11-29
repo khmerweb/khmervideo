@@ -1,19 +1,19 @@
 //settings.js
+import settingDB from "$lib/db/setting.js"
 
-async function setup(req){
-    //const module = await import('$lib/db/setting.js')
-    //let set = await module.default.getSettings(req, 1)
-    let setting = false //set[0]
+async function setup(){
+    let set = await settingDB.getSettings(1)
+    let setting = set[0]
     let settings = {}
 
     if(setting){
         settings = {
             siteTitle: setting.title,
             description: setting.description,
-            dashboard: setting.dashboard,
-            frontend: setting.frontend,
-            categories: setting.categories,
-            playlist: setting.playlist,
+            dashboard: parseInt(setting.dashboard),
+            frontend: parseInt(setting.frontend),
+            categories: parseInt(setting.categories),
+            playlist: parseInt(setting.frontend),
             thumb: '',
             date: ''
         }
@@ -21,7 +21,7 @@ async function setup(req){
         settings = {
             siteTitle: 'ដំណឹង​ល្អ',
             description: 'description',
-            dashboard: 10,
+            dashboard: 2,
             frontend: 20,
             categories: 20,
             playlist: 20,

@@ -3,13 +3,11 @@ import { ObjectId } from 'mongodb'
 import db from "./database.js"
 
 class Page{
-    async count(c){
-        const db = c.get('db')
+    async count(){
         return await db.collection('Page').countDocuments()
     }
 
-    async createPage(c, page){
-        const db = c.get('db')
+    async createPage(page){
         await db.collection('Page').insertOne(page)
     }
 
@@ -20,36 +18,26 @@ class Page{
         return page
     }
 
-    async getPages(c, amount){
-        const db = c.get('db')
-        return await db.collection('Page').find().sort({ date: -1 }).limit(amount).toArray()
+    async getPages(amount){
+        let pages = await db.collection('Page').find().sort({ date: -1 }).limit(amount).toArray()
+        pages = pages.map(page => ({...page, _id: page._id.toString()}))
+        return pages
     }
 
-    async updatePage(c, page){
-        const db = c.get('db')
-        const _id = new ObjectId(c.req.param('id'))
+    async updatePage(id, page){
+        const _id = new ObjectId(id)
         await db.collection('Page').updateOne({ _id }, {$set: page})
     }
 
-    async deletePage(c){
-        const db = c.get('db')
-        const _id = new ObjectId(c.req.param('id'))
+    async deletePage(id){
+        const _id = new ObjectId(id)
         await db.collection('Page').deleteOne({ _id })
     }
 
-    async paginatePages(c, amount){
-        const db = c.get('db')
-        let page
-
-        if(c.req.param('page')){
-            page = parseInt(c.req.param('page'))
-        }else if(c.req.query('page')){
-            page = parseInt(c.req.query('page'))
-        }else{
-            page =  parseInt(c.get('navPage'))
-        }
-        
-        return await db.collection('Page').find().sort({ date: -1 }).skip((page-1)*amount).limit(amount).toArray()
+    async paginatePages(page, amount){
+        let pages = await db.collection('Page').find().sort({ date: -1 }).skip((page-1)*amount).limit(amount).toArray()
+        pages = pages.map(page => ({...page, _id: page._id.toString()}))
+        return pages
     }
 }
 

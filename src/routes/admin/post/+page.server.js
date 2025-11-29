@@ -1,7 +1,7 @@
 import { redirect } from '@sveltejs/kit'
 import setup from "$lib/settings.js"
 import postDB from "$lib/db/post.js"
-import categoryDB from '$lib/db/category'
+import categoryDB from '$lib/db/category.js'
 
 export async function load({ locals, url, fetch, cookies }) {
     const user = locals.user
